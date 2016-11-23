@@ -18,3 +18,7 @@ or build it yourself
 * ``` docker build -t tobi312/rpi-postgresql-postgis:9.4-2.1 ./9.4-2.1/ ``` 
 * Optional: ``` mkdir -p /home/pi/.local/share/postgresql ```
 * ``` docker run --name postgis -d -p 5432:5432 -v /home/pi/.local/share/postgresql:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword tobi312/rpi-postgresql-postgis:9.4-2.1 ``` 
+
+### This Image on
+* [DockerHub](https://hub.docker.com/r/tobi312/rpi-postgresql-postgis/)
+* [GitHub](https://github.com/TobiasH87Docker/rpi-postgresql-postgis)
