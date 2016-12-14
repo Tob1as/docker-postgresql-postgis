@@ -3,7 +3,7 @@ FROM tobi312/rpi-postgresql:9.4
 RUN [ "cross-build-start" ]
 
 ENV POSTGIS_MAJOR 2.1
-ENV POSTGIS_VERSION 2.1.4+dfsg-3
+ENV POSTGIS_VERSION 2.1.*
 
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \

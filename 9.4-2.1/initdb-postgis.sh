@@ -3,7 +3,8 @@
 set -e
 
 # Perform all actions as $POSTGRES_USER
-export PGUSER="$POSTGRES_USER"
+#export PGUSER="$POSTGRES_USER"
+file_env 'PGUSER' "$POSTGRES_USER"
 
 # Create the 'template_postgis' template db
 "${psql[@]}" <<- 'EOSQL'
