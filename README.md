@@ -3,7 +3,7 @@
 This image based on [*tobi312/rpi-postgresql*](https://hub.docker.com/r/tobi312/rpi-postgresql/) - which is a port of the official PostgreSQL image - and a port of the [*mdillon/postgis*](https://hub.docker.com/r/mdillon/postgis/) image.
 
 ### Supported tags and respective `Dockerfile` links
--	`9.6-2.3` *Coming soon*
+-	[`9.6-2.3` TESTVERSION (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-postgresql-postgis/blob/master/9.6-2.3/Dockerfile)
 -	[`9.4-2.1`, `latest` (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-postgresql-postgis/blob/master/9.4-2.1/Dockerfile)
 
 ### What is PostGIS?
