@@ -6,12 +6,12 @@ This image based on [*tobi312/rpi-postgresql*](https://hub.docker.com/r/tobi312/
 -	`9.6-2.3` *Coming soon*
 -	[`9.4-2.1`, `latest` (*Dockerfile*)](https://github.com/TobiasH87Docker/rpi-postgresql-postgis/blob/master/9.4-2.1/Dockerfile)
 
-### What is PostgreSQL and PostGIS?
-PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
-
+### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
-> [wikipedia.org/wiki/PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) and [postgresql.org](https://www.postgresql.org/)
 > [wikipedia.org/wiki/PostGIS](https://en.wikipedia.org/wiki/PostGIS) and [postgis.net](http://postgis.net/)
+
+PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
+> [wikipedia.org/wiki/PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL) and [postgresql.org](https://www.postgresql.org/)
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png)
 
@@ -28,7 +28,7 @@ or build it yourself
 
 ### Environment Variables
 * `POSTGRES_PASSWORD`
-* more see: https://hub.docker.com/r/tobi312/rpi-postgresql/
+* more see: [tobi312/rpi-postgresql](https://hub.docker.com/r/tobi312/rpi-postgresql/)
 
 ### This Image on
 * [DockerHub](https://hub.docker.com/r/tobi312/rpi-postgresql-postgis/)
