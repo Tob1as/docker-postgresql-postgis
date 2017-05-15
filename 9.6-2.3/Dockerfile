@@ -15,5 +15,7 @@ RUN apt-get update \
 RUN mkdir -p /docker-entrypoint-initdb.d
 COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
 RUN chmod +x /docker-entrypoint-initdb.d/postgis.sh
+COPY ./update-postgis.sh /usr/local/bin
+RUN chmod +x /usr/local/bin/update-postgis.sh
 
 RUN [ "cross-build-end" ]
