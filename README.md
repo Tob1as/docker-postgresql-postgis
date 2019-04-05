@@ -1,4 +1,4 @@
-# PostgreSQL with PostGIS on Raspberry Pi / armhf
+# PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 This image based on [*tobi312/rpi-postgresql*](https://hub.docker.com/r/tobi312/rpi-postgresql/) - which is a port of the official PostgreSQL image - and a port of the [*mdillon/postgis*](https://hub.docker.com/r/mdillon/postgis/) image (,[source](https://github.com/appropriate/docker-postgis)).
 
