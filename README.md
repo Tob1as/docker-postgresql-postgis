@@ -4,7 +4,6 @@ This image based on [*tobi312/rpi-postgresql*](https://hub.docker.com/r/tobi312/
 
 ### Supported tags and respective `Dockerfile` links
 -	[`9.6-2.3`, `latest` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/stretch.armhf.9_6-2_3.Dockerfile)
--	[`9.4-2.1` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/jessie.armhf.9_4-2_1.Dockerfile)
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
