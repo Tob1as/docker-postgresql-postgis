@@ -1,9 +1,7 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
-This image based on [*tobi312/rpi-postgresql*](https://hub.docker.com/r/tobi312/rpi-postgresql/) - which is a port of the official PostgreSQL image - and a port of the [*mdillon/postgis*](https://hub.docker.com/r/mdillon/postgis/) image (,[source](https://github.com/appropriate/docker-postgis)).
-
 ### Supported tags and respective `Dockerfile` links
--	[`9.6-2.3`, `latest` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/stretch.armhf.9_6-2_3.Dockerfile)
+-	[`9.6-2.3`, `latest` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on Debian)
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
@@ -14,15 +12,44 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ![logo](https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png)
 
-### How to use this image
-* ``` docker pull tobi312/rpi-postgresql-postgis:9.6-2.3 ```
-* Optional: ``` mkdir -p /home/pi/.local/share/postgresql ```
-* ``` docker run --name postgis -d -p 5432:5432 -v /home/pi/.local/share/postgresql:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpassword tobi312/rpi-postgresql-postgis:9.6-2.3 ``` 
+### About these images:
+* a port of the [PostGIS](https://hub.docker.com/r/mdillon/postgis)-Image, [Sourcecode](https://github.com/appropriate/docker-postgis).
+* based on official Images: [arm32v7/postgres](https://hub.docker.com/r/arm32v7/postgres).  
+* build on Docker Hub with Autobuild, for example and more details see in this [repository](https://github.com/Tob1asDocker/dockerhubhooksexample).
 
-### Environment Variables
-* `TZ` (Default: Europe/Berlin)
-* `POSTGRES_PASSWORD`
-* more see: [tobi312/rpi-postgresql](https://hub.docker.com/r/tobi312/rpi-postgresql/)
+### How to use these images:
+
+* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d rpi-postgresql-postgis:latest ```
+* more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/mdillon/postgis)-Image
+
+#### Docker-Compose
+
+```yaml
+# Use postgres/mysecretpassword as user/password credentials
+version: '2.4'
+services:
+  postgis:
+    image: tobi312/rpi-postgresql-postgis:latest
+    #container_name: postgis
+    volumes:
+      - ./postgis:/var/lib/postgresql/data
+      #- /etc/timezone:/etc/timezone:ro
+      #- /etc/localtime:/etc/localtime:ro
+    environment:
+       POSTGRES_PASSWORD: mysecretpassword
+       #POSTGRES_DB: user
+       #POSTGRES_USER: user
+       #PGDATA: /var/lib/postgresql/data/pgdata
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      #start_period: 60s
+      interval: 30s
+      timeout: 5s
+      retries: 5
+```
 
 ### This Image on
 * [DockerHub](https://hub.docker.com/r/tobi312/rpi-postgresql-postgis/)
