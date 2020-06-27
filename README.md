@@ -13,14 +13,14 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 ![logo](https://raw.githubusercontent.com/docker-library/docs/master/postgres/logo.png)
 
 ### About these images:
-* a port of the [PostGIS](https://hub.docker.com/r/mdillon/postgis)-Image, [Sourcecode](https://github.com/appropriate/docker-postgis).
+* a port of the official [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image, [Sourcecode](https://github.com/postgis/docker-postgis).
 * based on official Images: [arm32v7/postgres](https://hub.docker.com/r/arm32v7/postgres).  
 * build on Docker Hub with Autobuild, for example and more details see in this [repository](https://github.com/Tob1asDocker/dockerhubhooksexample).
 
 ### How to use these images:
 
 * ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d rpi-postgresql-postgis:latest ```
-* more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/mdillon/postgis)-Image
+* more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image
 
 #### Docker-Compose
 
@@ -45,7 +45,6 @@ services:
       - 5432:5432
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
-      #start_period: 60s
       interval: 30s
       timeout: 5s
       retries: 5
