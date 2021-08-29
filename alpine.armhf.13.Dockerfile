@@ -114,5 +114,5 @@ RUN set -eux \
 COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
 COPY ./update-postgis.sh /usr/local/bin
 
-RUN chmod +x /docker-entrypoint-initdb.d/postgis.sh \
+RUN chmod +x /docker-entrypoint-initdb.d/10_postgis.sh \
     && chmod +x /usr/local/bin/update-postgis.sh

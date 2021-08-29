@@ -1,7 +1,7 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
--	[`13-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on AlpineLinux 3.14)
+-	[`13-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.13.Dockerfile) (on AlpineLinux 3.14)
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
