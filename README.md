@@ -1,7 +1,7 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
--	[`9.6-2.3`, `latest` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on Debian)
+-	[`13-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on AlpineLinux 3.14)
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
@@ -19,17 +19,16 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ### How to use these images:
 
-* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d rpi-postgresql-postgis:latest ```
+* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:13-3.1-alpine ```
 * more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image
 
 #### Docker-Compose
 
 ```yaml
-# Use postgres/mysecretpassword as user/password credentials
 version: '2.4'
 services:
   postgis:
-    image: tobi312/rpi-postgresql-postgis:latest
+    image: tobi312/rpi-postgresql-postgis:13-3.1-alpine
     #container_name: postgis
     volumes:
       - ./postgis:/var/lib/postgresql/data
@@ -45,7 +44,7 @@ services:
       - 5432:5432
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 30s
+      interval: 60s
       timeout: 5s
       retries: 5
 ```
