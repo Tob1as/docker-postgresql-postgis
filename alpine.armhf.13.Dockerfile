@@ -1,4 +1,4 @@
-FROM postgres:13-alpine
+FROM arm32v7/postgres:13-alpine
 
 LABEL org.opencontainers.image.authors="PostGIS Project - https://postgis.net, Tobias Hargesheimer <docker@ison.ws>" \
 	org.opencontainers.image.title="PostgreSQL+PostGIS" \
