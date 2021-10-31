@@ -1,8 +1,8 @@
-FROM arm32v7/postgres:13-alpine
+FROM arm32v7/postgres:9.6-alpine
 
 LABEL org.opencontainers.image.authors="PostGIS Project - https://postgis.net, Tobias Hargesheimer <docker@ison.ws>" \
 	org.opencontainers.image.title="PostgreSQL+PostGIS" \
-	org.opencontainers.image.description="Alpine with PostgreSQL 13 and PostGIS 3.1 on ARM arch" \
+	org.opencontainers.image.description="Alpine with PostgreSQL 9.6 and PostGIS 3.1 on ARM arch" \
 	org.opencontainers.image.licenses="MIT" \
 	org.opencontainers.image.url="https://hub.docker.com/r/tobi312/rpi-postgresql-postgis" \
 	org.opencontainers.image.source="https://github.com/Tob1asDocker/rpi-postgresql-postgis"
@@ -111,5 +111,5 @@ RUN set -eux \
     && rm -rf /usr/src/postgis \
     && apk del .fetch-deps .build-deps .build-deps-geos
 
-COPY --from=postgis/postgis:13-3.1-alpine /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
-COPY --from=postgis/postgis:13-3.1-alpine /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
+COPY --from=postgis/postgis:9.6-3.1 /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
+COPY --from=postgis/postgis:9.6-3.1 /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh

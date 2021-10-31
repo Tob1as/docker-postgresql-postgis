@@ -21,7 +21,5 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /docker-entrypoint-initdb.d
-COPY ./initdb-postgis.sh /docker-entrypoint-initdb.d/postgis.sh
-COPY ./update-postgis.sh /usr/local/bin
-RUN chmod +x /docker-entrypoint-initdb.d/postgis.sh && \
-      chmod +x /usr/local/bin/update-postgis.sh
+COPY --from=postgis/postgis:9.6-2.5 /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
+COPY --from=postgis/postgis:9.6-2.5 /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
