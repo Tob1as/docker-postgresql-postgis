@@ -1,6 +1,7 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
+-	[`14-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.14.Dockerfile) (on AlpineLinux 3.14)
 -	[`13-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.13.Dockerfile) (on AlpineLinux 3.14)
 -	[`9.6-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.9_6.Dockerfile) (on AlpineLinux 3.14) ([EOL](https://endoflife.date/postgresql))
 -	[`9.6-2.3` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on Debian 9 Stretch) ([EOL](https://endoflife.date/debian))
