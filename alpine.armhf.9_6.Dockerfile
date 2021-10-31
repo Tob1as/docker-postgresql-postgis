@@ -111,5 +111,5 @@ RUN set -eux \
     && rm -rf /usr/src/postgis \
     && apk del .fetch-deps .build-deps .build-deps-geos
 
-COPY --from=postgis/postgis:9.6-3.1 /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
-COPY --from=postgis/postgis:9.6-3.1 /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
+COPY --from=postgis/postgis:9.6-3.1-alpine /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
+COPY --from=postgis/postgis:9.6-3.1-alpine /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
