@@ -2,6 +2,8 @@
 
 ### Supported tags and respective `Dockerfile` links
 -	[`13-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.13.Dockerfile) (on AlpineLinux 3.14)
+-	[`9.6-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.9_6.Dockerfile) (on AlpineLinux 3.14) ([EOL](https://endoflife.date/postgresql))
+-	[`9.6-2.3` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on Debian 9 Stretch) ([EOL](https://endoflife.date/debian))
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
@@ -38,7 +40,6 @@ services:
        POSTGRES_PASSWORD: mysecretpassword
        #POSTGRES_DB: user
        #POSTGRES_USER: user
-       #PGDATA: /var/lib/postgresql/data/pgdata
     restart: unless-stopped
     ports:
       - 5432:5432
