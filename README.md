@@ -23,7 +23,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ### How to use these images:
 
-* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:14-3.3-alpine ```
+* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:14-3.3-alpine-arm ```
 * more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image
 
 #### Docker-Compose
