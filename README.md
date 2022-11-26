@@ -17,7 +17,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ### About these images:
 * a port of the official [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image, [Sourcecode](https://github.com/postgis/docker-postgis).
-* based on official Images: [arm32v7/postgres](https://hub.docker.com/r/arm32v7/postgres).  
+* based on official Images: [postgres](https://hub.docker.com/_/postgres).  
 * build on Docker Hub with Autobuild, for example and more details see in this [repository](https://github.com/Tob1asDocker/dockerhubhooksexample).
 
 ### How to use these images:
