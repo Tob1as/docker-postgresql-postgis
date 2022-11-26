@@ -80,7 +80,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
           file: ./alpine.15.Dockerfile
-          platforms: linux/amd64,linux/arm64/v8,linux/arm/v7
+          platforms: linux/arm/v7
           #pull: true
           push: true
           build-args: |
