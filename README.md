@@ -1,10 +1,10 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
--	[`14-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.14.Dockerfile) (on AlpineLinux 3.14)
--	[`13-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.13.Dockerfile) (on AlpineLinux 3.14)
--	[`9.6-3.1-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.9_6.Dockerfile) (on AlpineLinux 3.14) ([EOL](https://endoflife.date/postgresql))
--	[`9.6-2.3` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/debian.armhf.9_6.Dockerfile) (on Debian 9 Stretch) ([EOL](https://endoflife.date/debian))
+-	[`15-3.3-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.15.Dockerfile) (on AlpineLinux 3.16)
+-	[`14-3.3-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.14.Dockerfile) (on AlpineLinux 3.16)
+-	[`13-3.3-alpine` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.armhf.13.Dockerfile) (on AlpineLinux 3.16)
+
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).
@@ -22,7 +22,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ### How to use these images:
 
-* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:13-3.1-alpine ```
+* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:14-3.3-alpine ```
 * more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image
 
 #### Docker-Compose
@@ -31,7 +31,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 version: '2.4'
 services:
   postgis:
-    image: tobi312/rpi-postgresql-postgis:13-3.1-alpine
+    image: tobi312/rpi-postgresql-postgis:14-3.3-alpine
     #container_name: postgis
     volumes:
       - ./postgis:/var/lib/postgresql/data

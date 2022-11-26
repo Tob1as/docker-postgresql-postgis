@@ -3,7 +3,7 @@ version: '2.4'
 services:
 
   postgis:
-    image: tobi312/rpi-postgresql-postgis:13-3.1-alpine
+    image: tobi312/rpi-postgresql-postgis:14-3.3-alpine
     container_name: postgis
     volumes:
       - ./postgis:/var/lib/postgresql/data

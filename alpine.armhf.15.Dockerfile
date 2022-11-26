@@ -1,8 +1,8 @@
-FROM postgres:14-alpine3.16
+FROM postgres:15-alpine3.16
 
 LABEL org.opencontainers.image.authors="PostGIS Project - https://postgis.net, Tobias Hargesheimer <docker@ison.ws>" \
 	org.opencontainers.image.title="PostgreSQL+PostGIS" \
-	org.opencontainers.image.description="Alpine with PostgreSQL 14 and PostGIS 3.3 on ARM arch" \
+	org.opencontainers.image.description="Alpine with PostgreSQL 15 and PostGIS 3.3 on ARM arch" \
 	org.opencontainers.image.licenses="MIT" \
 	org.opencontainers.image.url="https://hub.docker.com/r/tobi312/rpi-postgresql-postgis" \
 	org.opencontainers.image.source="https://github.com/Tob1asDocker/rpi-postgresql-postgis"
@@ -134,5 +134,5 @@ RUN set -eux \
 # print PostGIS_Full_Version() for the log. ( experimental & internal )
     && cat /_pgis_full_version.txt
 
-COPY --from=postgis/postgis:14-3.3-alpine /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
-COPY --from=postgis/postgis:14-3.3-alpine /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
+COPY --from=postgis/postgis:15-3.3-alpine /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
+COPY --from=postgis/postgis:15-3.3-alpine /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
