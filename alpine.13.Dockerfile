@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.authors="PostGIS Project - https://postgis.net, T
 	org.opencontainers.image.description="Alpine with PostgreSQL 13 and PostGIS 3.1 on ARM arch" \
 	org.opencontainers.image.licenses="MIT" \
 	org.opencontainers.image.url="https://hub.docker.com/r/tobi312/rpi-postgresql-postgis" \
-	org.opencontainers.image.source="https://github.com/Tob1asDocker/rpi-postgresql-postgis"
+	org.opencontainers.image.source="https://github.com/Tob1as/docker-postgresql-postgis"
 
 ENV POSTGIS_VERSION 3.3.2
 ENV POSTGIS_SHA256 2a6858d1df06de1c5f85a5b780773e92f6ba3a5dc09ac31120ac895242f5a77b

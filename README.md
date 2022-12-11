@@ -1,9 +1,9 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
--	[`15-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.15.Dockerfile) (on AlpineLinux 3.16)
--	[`14-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.14.Dockerfile) (on AlpineLinux 3.16)
--	[`13-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1asDocker/rpi-postgresql-postgis/blob/master/alpine.13.Dockerfile) (on AlpineLinux 3.16)
+-	[`15-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.15.Dockerfile) (on AlpineLinux 3.16)
+-	[`14-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.14.Dockerfile) (on AlpineLinux 3.16)
+-	[`13-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.13.Dockerfile) (on AlpineLinux 3.16)
 
 \* = set arch (amd64, arm64 or arm)
 
@@ -54,4 +54,4 @@ services:
 
 ### This Image on
 * [DockerHub](https://hub.docker.com/r/tobi312/rpi-postgresql-postgis/)
-* [GitHub](https://github.com/Tob1asDocker/rpi-postgresql-postgis)
+* [GitHub](https://github.com/Tob1as/docker-postgresql-postgis)
