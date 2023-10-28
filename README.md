@@ -1,9 +1,10 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
--	[`15-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.15.Dockerfile) (on AlpineLinux 3.16)
--	[`14-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.14.Dockerfile) (on AlpineLinux 3.16)
--	[`13-3.3-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.13.Dockerfile) (on AlpineLinux 3.16)
+-	[`16-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
+-	[`15-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
+-	[`14-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
+-	[`13-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
 
 \* = set arch (amd64, arm64 or arm)
 
@@ -23,7 +24,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 
 ### How to use these images:
 
-* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:14-3.3-alpine-arm ```
+* ``` $ docker run --name some-postgis -v $(pwd)/postgis:/var/lib/postgresql/data -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d tobi312/rpi-postgresql-postgis:15-3.4-alpine-arm ```
 * more see official [PostgreSQL](https://hub.docker.com/_/postgres)-Image and [PostGIS](https://hub.docker.com/r/postgis/postgis)-Image
 
 #### Docker-Compose
@@ -32,7 +33,7 @@ PostgreSQL, often simply "Postgres", is an object-relational database management
 version: '2.4'
 services:
   postgis:
-    image: tobi312/rpi-postgresql-postgis:14-3.3-alpine-arm
+    image: tobi312/rpi-postgresql-postgis:15-3.4-alpine-arm
     #container_name: postgis
     volumes:
       - ./postgis:/var/lib/postgresql/data

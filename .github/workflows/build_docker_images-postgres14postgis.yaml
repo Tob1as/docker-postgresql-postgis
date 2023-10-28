@@ -6,7 +6,7 @@ on:
   #    - 'main'
   #    - 'master'
   #  paths:
-  #    - 'alpine.14.Dockerfile'
+  #    - 'alpine.Dockerfile'
   #    - '.github/workflows/build_docker_images-postgres14postgis.yaml'
   workflow_dispatch:
   schedule:
@@ -83,17 +83,18 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
-          file: ./alpine.14.Dockerfile
+          file: ./alpine.Dockerfile
           platforms: linux/arm/v7
           pull: true
           push: true
-          #build-args: |
+          build-args: |
+             POSTGRES_VERSION=14
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:14-3.3-alpine-arm
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:14-3.3-alpine-arm
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:14-3.3-alpine-arm
+            docker.io/${{steps.script.outputs.docker_repo}}:14-3.4-alpine-arm
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:14-3.4-alpine-arm
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:14-3.4-alpine-arm
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
@@ -170,17 +171,18 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
-          file: ./alpine.14.Dockerfile
+          file: ./alpine.Dockerfile
           platforms: linux/arm64/v8
           pull: true
           push: true
-          #build-args: |
+          build-args: |
+             POSTGRES_VERSION=14
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:14-3.3-alpine-arm64
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:14-3.3-alpine-arm64
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:14-3.3-alpine-arm64
+            docker.io/${{steps.script.outputs.docker_repo}}:14-3.4-alpine-arm64
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:14-3.4-alpine-arm64
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:14-3.4-alpine-arm64
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
@@ -257,17 +259,18 @@ jobs:
         with:
           builder: ${{ steps.buildx.outputs.name }}
           context: .
-          file: ./alpine.14.Dockerfile
+          file: ./alpine.Dockerfile
           platforms: linux/amd64
           pull: true
           push: true
-          #build-args: |
+          build-args: |
+             POSTGRES_VERSION=14
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:14-3.3-alpine-amd64
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:14-3.3-alpine-amd64
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:14-3.3-alpine-amd64
+            docker.io/${{steps.script.outputs.docker_repo}}:14-3.4-alpine-amd64
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:14-3.4-alpine-amd64
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:14-3.4-alpine-amd64
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3

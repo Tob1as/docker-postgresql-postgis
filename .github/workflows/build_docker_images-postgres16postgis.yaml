@@ -88,13 +88,13 @@ jobs:
           pull: true
           push: true
           build-args: |
-             POSTGRES_VERSION=15
+             POSTGRES_VERSION=16
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:15-3.4-alpine-arm
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:15-3.4-alpine-arm
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:15-3.4-alpine-arm
+            docker.io/${{steps.script.outputs.docker_repo}}:16-3.4-alpine-arm
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:16-3.4-alpine-arm
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:16-3.4-alpine-arm
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
@@ -176,13 +176,13 @@ jobs:
           pull: true
           push: true
           build-args: |
-             POSTGRES_VERSION=15
+             POSTGRES_VERSION=16
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:15-3.4-alpine-arm64
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:15-3.4-alpine-arm64
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:15-3.4-alpine-arm64
+            docker.io/${{steps.script.outputs.docker_repo}}:16-3.4-alpine-arm64
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:16-3.4-alpine-arm64
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:16-3.4-alpine-arm64
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
@@ -264,13 +264,13 @@ jobs:
           pull: true
           push: true
           build-args: |
-             POSTGRES_VERSION=15
+             POSTGRES_VERSION=16
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:15-3.4-alpine-amd64
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:15-3.4-alpine-amd64
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:15-3.4-alpine-amd64
+            docker.io/${{steps.script.outputs.docker_repo}}:16-3.4-alpine-amd64
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:16-3.4-alpine-amd64
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:16-3.4-alpine-amd64
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v3
