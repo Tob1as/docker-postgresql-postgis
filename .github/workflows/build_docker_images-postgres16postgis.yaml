@@ -1,4 +1,4 @@
-name: 'build docker images: Postgres 15 + PostGIS'
+name: 'build docker images: Postgres 16 + PostGIS'
 
 on:
   #push:
