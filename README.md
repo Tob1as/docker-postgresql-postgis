@@ -6,7 +6,9 @@
 -	[`14-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
 -	[`13-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
 
-\* = set arch (amd64, arm64 or arm)
+\* = set arch (amd64, arm64 or arm)  
+  
+Alternative use: https://github.com/baosystems/docker-postgis , see https://github.com/postgis/docker-postgis/issues/216#issuecomment-981824739
 
 ### What is PostGIS?
 PostGIS is an open source software program that adds support for geographic objects to the PostgreSQL object-relational database. PostGIS follows the Simple Features for SQL specification from the Open Geospatial Consortium (OGC).

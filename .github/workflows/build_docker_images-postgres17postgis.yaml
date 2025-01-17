@@ -1,4 +1,4 @@
-name: 'build docker images: Postgres 15 + PostGIS'
+name: 'build docker images: Postgres 17 + PostGIS'
 
 on:
   #push:
@@ -7,7 +7,7 @@ on:
   #    - 'master'
   #  paths:
   #    - 'alpine.Dockerfile'
-  #    - '.github/workflows/build_docker_images-postgres15postgis.yaml'
+  #    - '.github/workflows/build_docker_images-postgres17postgis.yaml'
   workflow_dispatch:
   schedule:
     - cron: '30 5 24 * *'  # At 05:30 on day-of-month 24.
@@ -86,13 +86,13 @@ jobs:
           pull: true
           push: true
           build-args: |
-             POSTGRES_VERSION=15
+             POSTGRES_VERSION=17
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:15-3.5-alpine-arm
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:15-3.5-alpine-arm
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:15-3.5-alpine-arm
+            docker.io/${{steps.script.outputs.docker_repo}}:17-3.5-alpine-arm
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:17-3.5-alpine-arm
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:17-3.5-alpine-arm
 
   postgis-arm64:
     runs-on: ubuntu-latest
@@ -163,13 +163,13 @@ jobs:
           pull: true
           push: true
           build-args: |
-             POSTGRES_VERSION=15
+             POSTGRES_VERSION=17
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:15-3.5-alpine-arm64
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:15-3.5-alpine-arm64
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:15-3.5-alpine-arm64
+            docker.io/${{steps.script.outputs.docker_repo}}:17-3.5-alpine-arm64
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:17-3.5-alpine-arm64
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:17-3.5-alpine-arm64
 
   postgis-amd64:
     runs-on: ubuntu-24.04-arm
@@ -240,10 +240,10 @@ jobs:
           pull: true
           push: true
           build-args: |
-             POSTGRES_VERSION=15
+             POSTGRES_VERSION=17
           #  BUILD_DATE=${{steps.script.outputs.build_date}}
           #  VCS_REF=${{steps.script.outputs.commit_hash}}
           tags: |
-            docker.io/${{steps.script.outputs.docker_repo}}:15-3.5-alpine-amd64
-          #  ghcr.io/${{steps.script.outputs.github_repo}}:15-3.5-alpine-amd64
-          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:15-3.5-alpine-amd64
+            docker.io/${{steps.script.outputs.docker_repo}}:17-3.5-alpine-amd64
+          #  ghcr.io/${{steps.script.outputs.github_repo}}:17-3.5-alpine-amd64
+          #  quay.io/${{steps.script.outputs.redhat_quay_repo}}:17-3.5-alpine-amd64

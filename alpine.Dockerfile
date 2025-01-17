@@ -1,12 +1,12 @@
 # docker build --no-cache --progress=plain -t tobi312/rpi-postgresql-postgis:15-3.4-alpine-arm64 --build-arg POSTGRES_VERSION=15 -f alpine.Dockerfile .
-ARG ALPINE_VERSION=3.18
+ARG ALPINE_VERSION=3.21
 ARG POSTGRES_VERSION=15
 
 FROM postgres:${POSTGRES_VERSION}-alpine${ALPINE_VERSION}
 
 ARG POSTGRES_VERSION
-ENV POSTGIS_VERSION 3.4.0
-ENV POSTGIS_SHA256 3acdf303adfd58d73543a70e6ebe99af29301262c56cf32220d42caa3efab024
+ENV POSTGIS_VERSION 3.5.1
+ENV POSTGIS_SHA256 b46a63a0563a46a670686a56464c1afb5db0b97ee62e87766edd1d2748492b09
 
 LABEL maintainer="PostGIS Project - https://postgis.net" \
       org.opencontainers.image.description="PostGIS ${POSTGIS_VERSION} spatial database extension with PostgreSQL ${POSTGRES_VERSION} Alpine" \
@@ -123,5 +123,5 @@ RUN set -eux \
 # from the '/_pgis_full_version.txt' file. This is for experimental and internal purposes.
     && cat /_pgis_full_version.txt
 
-COPY --from=postgis/postgis:15-3.4-alpine /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
-COPY --from=postgis/postgis:15-3.4-alpine /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
+COPY --from=postgis/postgis:15-3.5-alpine /docker-entrypoint-initdb.d/10_postgis.sh /docker-entrypoint-initdb.d/10_postgis.sh
+COPY --from=postgis/postgis:15-3.5-alpine /usr/local/bin/update-postgis.sh /usr/local/bin/update-postgis.sh
