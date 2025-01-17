@@ -1,10 +1,11 @@
 # PostgreSQL with PostGIS on Raspberry Pi / ARM
 
 ### Supported tags and respective `Dockerfile` links
--	[`16-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
--	[`15-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
--	[`14-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
--	[`13-3.4-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.18)
+-	[`17-3.5-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.21)
+-	[`16-3.5-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.21)
+-	[`15-3.5-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.21)
+-	[`14-3.5-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.21)
+-	[`13-3.5-alpine-*` (*Dockerfile*)](https://github.com/Tob1as/docker-postgresql-postgis/blob/master/alpine.Dockerfile) (on AlpineLinux 3.21)
 
 \* = set arch (amd64, arm64 or arm)  
   
